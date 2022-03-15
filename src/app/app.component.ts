@@ -22,9 +22,17 @@ export class AppComponent {
         Validators.email
       ]
     ],
-    password: ['']
-
-    });
+    password: ['',
+  [
+    Validators.required,
+    Validators.minLength(6)
+  ]
+],
+terms:['',[
+  Validators.required,
+  Validators.requiredTrue
+   ]]
+ });
   }
   send():any {
     console.log(this.formLogin.value);
