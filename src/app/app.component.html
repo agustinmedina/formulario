@@ -1,0 +1,23 @@
+<div>
+  <form [formGroup]="formLogin" (submit)="send()">
+
+    <!--*****Input email***********-->
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" formControlName="email">
+    </div>
+    <!--*****Input password***********-->
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+    <!--*****Button***********-->
+    <div>
+      <button>Send</button>
+    </div>
+  </form>
+</div>
+
+<div>
+  Valido:{{formLogin.valid | json}}
+</div>
