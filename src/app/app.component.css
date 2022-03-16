@@ -1,0 +1,9 @@
+label{
+    display:block;
+}
+input.ng-untouched.ng-invalid{
+    border:solid 2px tomato;
+}
+input.ng-valid{
+    border:solid 2px greenyellow;
+}
