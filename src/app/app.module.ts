@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
     ErrorTailorModule.forRoot({
       errors: {
         useValue: {
-          required: 'This field is required',
+          required: 'Este campo es obligatorio',
           minlength: ({ requiredLength, actualLength }) => 
                       `Expect ${requiredLength} but got ${actualLength}`,
           invalidAddress: error => `Address isn't valid`

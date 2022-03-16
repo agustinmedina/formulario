@@ -7,9 +7,10 @@
       <input type="text" id="email" formControlName="email">
     </div>
     <!--*****Input password***********-->
-    <div>
+    <div class="form-control">
       <label for="password">Password</label>
-      <input type="password" id="password" formControlName="password">
+      <input type="password" id="password" formControlName="password"
+      [controlErrorsTpl]="messagePasswordError">
     </div>
     <!--*****Input password***********-->
     <div>
@@ -23,6 +24,16 @@
     </div>
   </form>
 </div>
+
+<ng-template let-error let-text="text" #messagePasswordError>
+  <!--{{error | json}} {{text}}-->
+
+  
+    <b>Error:</b>
+  <div *ngIf="error?.minlength">
+    <i>No cumples con los caracteres minimos que son ({{error?.minlength?.requiredLength}}), ingresaste solo: {{error?.minlength?.actualLength}}</i>
+  </div>
+</ng-template>
 
 <div>
   Valido:{{formLogin.valid | json}}
